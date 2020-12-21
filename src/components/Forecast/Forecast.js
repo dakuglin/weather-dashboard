@@ -5,7 +5,12 @@ class Forecast extends Component {
     render() {
         return (
             <>
-                <div>weather</div>
+                <div>
+                   Location: {this.props.city}
+                    Temperature: {this.props.temperature}
+                    Humidity: {this.props.hmuidity}
+                    Weather Condition: {this.props.description}
+                </div>
             </>
         )
     }
