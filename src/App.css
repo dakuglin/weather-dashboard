@@ -1,0 +1,28 @@
+
+/* split the screen in half */
+.split {
+    height: 100%;
+    width: 65%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;  
+}
+  
+/* control the left side */
+.left {
+    left: 0;
+    background: url("https://images.pexels.com/photos/1544880/pexels-photo-1544880.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background: url("https://images.pexels.com/photos/3090955/pexels-photo-3090955.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    /* background-size: contain;
+    background-repeat: no-repeat; */
+    width:100%;
+    height:auto;
+}
+  
+/* control the right side */
+.right {
+    right: 0;
+    background-color: gray;
+}
