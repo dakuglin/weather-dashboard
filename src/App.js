@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import Title from "./components/Title/Title";
-import Search from "./components/Search/Search";
+import Naviagtion from "./components/Navigation/Navigation";
+import Hero from "./components/Hero/Hero";
+// import Search from "./components/Search/Search";
 import Forecast from "./components/Forecast/Forecast";
 import "./App.css";
 
@@ -51,10 +52,14 @@ class App extends Component {
       //JSX
       <>
       <div className="split left">
-        <Title />
+        <div className="centered">
+          <Hero />
+        </div>
       </div>
+
       <div className="split right">
-        <Search getWeather={this.getWeather}/>
+        <Naviagtion getWeather={this.getWeather}/>
+        {/* <Search getWeather={this.getWeather}/> */}
         <Forecast 
           city={this.state.city}
           temperature={this.state.temperature}
