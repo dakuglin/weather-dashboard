@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Naviagtion from "./components/Navigation/Navigation";
 import Hero from "./components/Hero/Hero";
-// import Search from "./components/Search/Search";
 import Forecast from "./components/Forecast/Forecast";
+import City from "./components/City/City";
 import "./App.css";
 
 
@@ -12,6 +12,7 @@ class App extends Component {
 
   state = {
     city: undefined,
+    country: undefined,
     temperature: undefined,
     temp_max: undefined,
     temp_min: undefined,
@@ -28,8 +29,9 @@ class App extends Component {
     const city = event.target.elements.city.value;
     
     const apiQuery = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+      `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${API_KEY}`
     );
+
 
     const result = await apiQuery.json();
 
@@ -37,6 +39,7 @@ class App extends Component {
 
     this.setState({
       city: result.name,
+      country: result.sys.country,
       temperature: result.main.temp,
       temp_max: result.main.temp_max,
       temp_min: result.main.temp_min,
@@ -52,6 +55,10 @@ class App extends Component {
       //JSX
       <>
       <div className="split left">
+        <City 
+          city={this.state.city}
+          country={this.state.country}
+        />
         <div className="centered">
           <Hero />
         </div>
@@ -59,9 +66,7 @@ class App extends Component {
 
       <div className="split right">
         <Naviagtion getWeather={this.getWeather}/>
-        {/* <Search getWeather={this.getWeather}/> */}
         <Forecast 
-          city={this.state.city}
           temperature={this.state.temperature}
           temp_max={this.state.temp_max}
           temp_min={this.state.temp_min}
@@ -71,7 +76,6 @@ class App extends Component {
           error={this.state.error}
         />
       </div>
-      
       </>
     );
   };

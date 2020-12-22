@@ -1,7 +1,7 @@
 
 .split {
     height: 100%;
-    width: 75%;
+    width: 40%;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -16,44 +16,50 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 35%;
-    /* opacity: .75; */
+    width: 60%;
 }
 
 .right {
     right: 0;
     background-color: whtiesmoke;
-    width: 65%;
+    width: 40%;
 }
 
 .centered {
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
 
-/* .hero-img {
-    background-image: url("https://images.pexels.com/photos/3090955/pexels-photo-3090955.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    background-size: contain;
-    background-repeat: no-repeat;
-  
-    background-size: 70% 100%;
-    opacity: .75;
-} */
-
+.city-name {
+    font-size: 80px;
+    font-style: italic;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 50px;
+}
 
 h1 {
-    color: black;
+    color: whitesmoke;
     display: block;
     margin:0 auto;
     text-align: center;
-    opacity: 1;
+    font-size: 55px;
+    padding-bottom: 20px;
 }
 
 p {
-    color:#fff;
+    color:whitesmoke;
     display: block;
     margin:0 auto;
+    font-size: 30px;
+    font-style: italic;
 } 
+
+.city-temperature {
+    font-size: 130px;
+    padding-left: 40px;
+    font-style: italic;
+}
