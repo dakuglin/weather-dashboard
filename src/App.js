@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { render } from "react-dom";
 import Naviagtion from "./components/Navigation/Navigation";
 import Hero from "./components/Hero/Hero";
 import Forecast from "./components/Forecast/Forecast";
@@ -20,6 +21,7 @@ class App extends Component {
     description: undefined,
     icon: undefined,
     error: undefined,
+    showHideForecast: false,
   };
 
   getWeather = async (event) => {
@@ -49,7 +51,8 @@ class App extends Component {
       error: "",
     });
   };
-
+  
+  
   render() {
     return (   
       //JSX
@@ -66,15 +69,7 @@ class App extends Component {
 
       <div className="split right">
         <Naviagtion getWeather={this.getWeather}/>
-        <Forecast 
-          temperature={this.state.temperature}
-          temp_max={this.state.temp_max}
-          temp_min={this.state.temp_min}
-          humidity={this.state.humidity}
-          description={this.state.description}
-          icon={this.state.icon}
-          error={this.state.error}
-        />
+      
       </div>
       </>
     );
