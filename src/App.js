@@ -1,23 +1,19 @@
-import React, { Component } from "react";
-import SearchCity from "./components/common/SearchCity";
+import React from "react";
+
+// import { Wrapper } from "./components/common/Wrapper";
+import { Main } from "./components/common/Main";
 
 
+const App = () =>  {
 
-
-//const API_KEY = "b9f7c13b06d755b57198e1781901ad93"; //API Key for weather database query
-
-class App extends Component {
-
-
-  render() {
-    return (   
-      //JSX
-      <>
-      <p>hello</p>
-      <SearchCity />
-      </>
-    );
-  };
+  return (   
+    <>
+    {/* <Wrapper> */}
+      <h1>Hello World</h1>
+      <Main />
+    {/* </Wrapper> */}
+    </>
+  );
 };
 
 export default App;
