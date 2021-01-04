@@ -1,12 +1,31 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { API_KEY } from "../config";
-import { Context } from "../Context";
-import { Header } from "./Header";
-import { Content } from "./Content";
-import { Search } from "./Search";
-import { Weather } from "./Weather";
+import { API_KEY } from "../../config";
+import { Context } from "../../Context";
+import { Header } from "../common/Header";
+import { Content } from "../common/Content";
+import { Search } from "../common/Search";
+import { Weather } from "../common/Weather";
+import styled, { css } from "styled-components";
 
+const Split = styled.div`
+  height: 100%;
+  width: 55%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden; 
+  ${props => props.left ? css`
+    left: 0;
+    background: url("https://images.pexels.com/photos/3090955/pexels-photo-3090955.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    width: 55%;
+    padding-top: 20px;
+    ` : css`
+    right: 0;
+    background-color:#dadbdc;
+    width: 45%;
+  `}
+`;
 
 export const Main = () => {
 
@@ -35,17 +54,17 @@ export const Main = () => {
   return (
     <>
     <div className="main">
-      <div className="split right">
+      <Split left>
         <Header />
-      </div>
-      <div className="split left">
+      </Split> 
+      <Split >  
         <Content>
           <Context.Provider value={{ data, weather }}> 
             <Search />
             { weather && <Weather /> }
           </Context.Provider>
         </Content>
-      </div>
+      </Split> 
     </div>
     </>
   );
