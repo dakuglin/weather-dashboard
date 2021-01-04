@@ -1,17 +1,12 @@
 import React from "react";
-
-// import { Wrapper } from "./components/common/Wrapper";
-import { Main } from "./components/common/Main";
+import { Main } from "./components/Main";
 
 
 const App = () =>  {
 
   return (   
     <>
-    {/* <Wrapper> */}
-      <h1>Hello World</h1>
-      <Main />
-    {/* </Wrapper> */}
+    <Main />
     </>
   );
 };
