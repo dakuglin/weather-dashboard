@@ -2,55 +2,48 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Description
 
-## Description 
+Technologies & Languages
 
-Technologies & Languages 
-* JavaScript
-* React 
-* Open Weather API
-* React Bootstrap
-* React Icons 
-* CSS / Styling
+- JavaScript
+- React
+- Open Weather API
+- React Hooks
+- React Bootstrap
+- React Icons
+- React Styled Components
 
-This weather tracker application allows the user to enter any city and view the cities current weather condition. Open Weather API makes a call to the weather database and retrieves current weather data. 
+This weather tracker application allows the user to enter any city and view the cities current weather conditions and temperatures. Open Weather API makes a call to the weather database and retrieves current weather data.
 
+## Table of Contents
 
-## Table of Contents 
-
-* [Video](#video)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
-* [License](#license)
-* [Questions](#questions)
-
+- [Video](#video)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Questions](#questions)
 
 ## Video
 
-
-
-![Walkthrough Video](./.gif)
-
+![Walkthrough Video](./applicationVideo.gif)
 
 ## Installation
 
 Steps to install my project include:
-* npm install the dependencies 
 
+- npm install the dependencies
 
-## Usage 
+## Usage
 
-![Getting Started](./pictures/.PNG)
-* 
+![Getting Started](./images/weatherApp.jpg)
 
-![Getting Started](./pictures/.PNG)
-* 
-
+- When you first arrive to the application you will see a search bar. Type in any city and see the current weather data for that city with the Open Weather API.
 
 ## Credits
 
-All of the code was developed by Dana Kuglin. Information about her GitHub profile and how you can contact her are listed below in the questions section.  
+All of the code was developed by Dana Kuglin. Information about her GitHub profile and how you can contact her are listed below in the questions section.
 
 ## License
 
@@ -61,4 +54,4 @@ This project is licensed under MIT.
 GitHub Username: dakuglin
 GitHub Profile: (https://github.com/dakuglin)
 
-Please email me with additional questions at dakuglin@gmail.com  
+Please email me with additional questions at dakuglin@gmail.com
