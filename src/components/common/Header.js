@@ -5,15 +5,19 @@ import {
   TiWeatherSunny,
 } from "react-icons/ti"
 
+
 export const Header = () => {
+
   return (
     <>
     <div className="header">
       <h1 className="header-title">Weather Tracker</h1>
-      <p>know before you go...</p>
-      <TiWeatherSnow />
-      <TiWeatherStormy />
-      <TiWeatherSunny />
+      <h2>know before you go...</h2>
+      <h2>
+        <TiWeatherSnow />
+        <TiWeatherStormy />
+        <TiWeatherSunny />
+      </h2>
     </div>
     </>
   );

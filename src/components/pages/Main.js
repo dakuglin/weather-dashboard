@@ -6,6 +6,7 @@ import { Header } from "../common/Header";
 import { Content } from "../common/Content";
 import { Search } from "../common/Search";
 import { Weather } from "../common/Weather";
+import { City } from "../common/City";
 import styled, { css } from "styled-components";
 
 const Split = styled.div`
@@ -19,7 +20,7 @@ const Split = styled.div`
     left: 0;
     background: url("https://images.pexels.com/photos/3090955/pexels-photo-3090955.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     width: 55%;
-    padding-top: 20px;
+
     ` : css`
     right: 0;
     background-color:#dadbdc;
@@ -54,17 +55,18 @@ export const Main = () => {
   return (
     <>
     <div className="main">
-      <Split left>
-        <Header />
-      </Split> 
-      <Split >  
-        <Content>
-          <Context.Provider value={{ data, weather }}> 
-            <Search />
-            { weather && <Weather /> }
-          </Context.Provider>
-        </Content>
-      </Split> 
+    <Content>
+      <Context.Provider value={{ data, weather }}> 
+        <Split left>
+        { weather && <City left/>}
+          <Header />
+        </Split> 
+        <Split >  
+          <Search />
+          { weather && <Weather /> }
+        </Split> 
+      </Context.Provider>
+    </Content>
     </div>
     </>
   );

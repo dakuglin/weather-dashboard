@@ -1,12 +1,6 @@
 import React, { useContext } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Context } from "../../Context";
-import styled from "styled-components";
-
-const Btn = styled.button`
-  padding: 8px;
-  border-radius: 4px;
-`;
 
 
 export const Search = () => {
@@ -25,7 +19,7 @@ export const Search = () => {
               name="city"
               type="text"
             />
-            <Btn>Get Weather</Btn>
+            <button>Get Weather</button>
           </form>
         </Navbar.Collapse>
     </Navbar>
