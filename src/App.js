@@ -6,15 +6,17 @@ const GlobalStyle = createGlobalStyle`
   h1 {
     color: whitesmoke;
     text-align: center;
-    font-size: 55px;
+    font-size: 75px;
     padding-bottom: 10px;
-    margin-top: 80%;
+    margin-top: 70%;
+    font-family: 'Lusitana', serif;
   }
   h2 {
     color:whitesmoke;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     font-style: italic;
+    font-family: 'Lusitana', serif;
   }
   input {
     margin-right: 15px;

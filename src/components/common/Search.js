@@ -16,6 +16,7 @@ export const Search = () => {
           <Nav className="mr-auto" />
           <form onSubmit={ data }>
             <input 
+              placeholder="Search a city..."
               name="city"
               type="text"
             />

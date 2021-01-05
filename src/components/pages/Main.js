@@ -6,7 +6,6 @@ import { Header } from "../common/Header";
 import { Content } from "../common/Content";
 import { Search } from "../common/Search";
 import { Weather } from "../common/Weather";
-import { City } from "../common/City";
 import styled, { css } from "styled-components";
 
 const Split = styled.div`
@@ -55,18 +54,17 @@ export const Main = () => {
   return (
     <>
     <div className="main">
-    <Content>
-      <Context.Provider value={{ data, weather }}> 
-        <Split left>
-        { weather && <City left/>}
-          <Header />
-        </Split> 
-        <Split >  
-          <Search />
-          { weather && <Weather /> }
-        </Split> 
-      </Context.Provider>
-    </Content>
+      <Split left>
+        <Header weather/>
+      </Split> 
+      <Split >  
+        <Content>
+          <Context.Provider value={{ data, weather }}> 
+            <Search />
+            { weather && <Weather /> }
+          </Context.Provider>
+        </Content>
+      </Split> 
     </div>
     </>
   );
