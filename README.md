@@ -55,3 +55,5 @@ GitHub Username: dakuglin
 GitHub Profile: (https://github.com/dakuglin)
 
 Please email me with additional questions at dakuglin@gmail.com
+
+[!linkedin](https://www.flaticon.com/svg/static/icons/svg/174/174857.svg)

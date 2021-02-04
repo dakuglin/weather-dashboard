@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { API_KEY } from "../../config";
+import { API_KEY } from "../../config.js";
 import { Context } from "../../Context";
 import { Header } from "../common/Header";
 import { Content } from "../common/Content";
